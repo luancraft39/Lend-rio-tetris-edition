@@ -3,7 +3,7 @@
 <html lang="pt-br" style="--dynamic-glow:#f00000;"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lendário Tetris Edition v6.1</title>
+    <title>LendÃ¡rio Tetris Edition v6.1</title>
     <style>
         :root {
             --primary: #00d2ff;
@@ -26,7 +26,7 @@
             overflow: hidden;
         }
 
-        /* FUNDO ANIMADO (Gráfico Médio/Pro) */
+        /* FUNDO ANIMADO (GrÃ¡fico MÃ©dio/Pro) */
         @keyframes bgScroll { from { background-position: 0 0; } to { background-position: 0 1000px; } }
         #bg-canvas-container {
             position: fixed; inset: 0; z-index: -1; opacity: 0.3;
@@ -103,13 +103,13 @@
 
     <!-- MENU -->
     <div id="menu-overlay" class="">
-        <div class="studio-tag">LENDÁRIO STUDIO APRESENTA</div>
-        <h1 class="game-title">LENDÁRIO<br>TETRIS EDITION</h1>
+        <div class="studio-tag">LENDÃRIO STUDIO APRESENTA</div>
+        <h1 class="game-title">LENDÃRIO<br>TETRIS EDITION</h1>
         <div style="font-size: 0.6rem; margin-bottom: 20px;">VERSION 6.1</div>
 
         <div class="menu-nav">
             <button class="btn btn-main" onclick="start()">INICIAR JOGO</button>
-            <button class="btn" onclick="toggleModal(&#39;modal-config&#39;)">CONFIGURAÇÕES</button>
+            <button class="btn" onclick="toggleModal(&#39;modal-config&#39;)">CONFIGURAÃ‡Ã•ES</button>
             <button class="btn" onclick="toggleModal(&#39;modal-modes&#39;)">MODOS / PISTAS</button>
             <button class="btn" onclick="toggleModal(&#39;modal-help&#39;)">AJUDA</button>
         </div>
@@ -120,11 +120,11 @@
     <!-- MODAL CONFIG -->
     <div id="modal-config" class="modal" style="display: none;">
         <div class="modal-content">
-            <h3 style="margin-top:0">Configurações</h3>
-            <label style="font-size: 12px;">Qualidade dos Gráficos:</label>
+            <h3 style="margin-top:0">ConfiguraÃ§Ãµes</h3>
+            <label style="font-size: 12px;">Qualidade dos GrÃ¡ficos:</label>
             <div class="graphic-btns">
                 <button id="gfx-low" class="btn-small" onclick="setGfx(&#39;low&#39;)">BAIXO</button>
-                <button id="gfx-med" class="btn-small active-gfx" onclick="setGfx(&#39;med&#39;)">MÉDIO</button>
+                <button id="gfx-med" class="btn-small active-gfx" onclick="setGfx(&#39;med&#39;)">MÃ‰DIO</button>
                 <button id="gfx-pro" class="btn-small" onclick="setGfx(&#39;pro&#39;)">PRO</button>
             </div>
             <br>
@@ -136,7 +136,7 @@
     <div id="modal-help" class="modal" style="display: none;">
         <div class="modal-content">
             <h3>Como Jogar</h3>
-            <p style="font-size: 13px; line-height: 1.5;">Use as setas para mover, o botão de raio para queda instantânea e complete as linhas para subir de nível!</p>
+            <p style="font-size: 13px; line-height: 1.5;">Use as setas para mover, o botÃ£o de raio para queda instantÃ¢nea e complete as linhas para subir de nÃ­vel!</p>
             <button class="btn btn-main" style="width:100%" onclick="toggleModal(&#39;modal-help&#39;)">ENTENDI</button>
         </div>
     </div>
@@ -150,16 +150,16 @@
     </div>
 
     <audio id="bg-music" loop="">
-        <source src="https://files.catbox.moe/x9d8f9.mp3" type="audio/mpeg">
+        <source src="https://files.catbox.moe/resxkn.m4a" type="audio/mpeg">
     </audio>
 
     <!-- JOGO -->
     <div id="game-wrapper" class="hidden">
         <canvas id="tetris" width="220" height="420"></canvas>
         <div class="ui-side">
-            <div class="ui-box"><div class="ui-label">Próxima</div><canvas id="next" width="80" height="80"></canvas></div>
+            <div class="ui-box"><div class="ui-label">PrÃ³xima</div><canvas id="next" width="80" height="80"></canvas></div>
             <div class="ui-box"><div class="ui-label">Pontos</div><div id="score" class="ui-value">0</div></div>
-            <div class="ui-box"><div class="ui-label">Nível</div><div id="level" class="ui-value">1</div></div>
+            <div class="ui-box"><div class="ui-label">NÃ­vel</div><div id="level" class="ui-value">1</div></div>
         </div>
     </div>
 
@@ -168,8 +168,8 @@
         <button class="btn" onclick="drop()">&#8595;</button>
         <button class="btn" onclick="move(1)">&#8594;</button>
         <button class="btn" style="color:var(--primary)" onclick="hardDrop()">&#9889;</button>
-        <button class="btn btn-wide" onclick="rotatePiece()">GIRAR PEÇA</button>
-        <button class="btn btn-wide" onclick="hardDrop()">INSTANTÂNEO</button>
+        <button class="btn btn-wide" onclick="rotatePiece()">GIRAR PEÃ‡A</button>
+        <button class="btn btn-wide" onclick="hardDrop()">INSTANTÃ‚NEO</button>
     </div>
 
 <script>
@@ -279,7 +279,7 @@
     function hardDrop() {
         while (!collide(arena, player)) player.pos.y++;
         player.pos.y--;
-        drop(); // Aproveita a lógica do merge
+        drop(); // Aproveita a lÃ³gica do merge
     }
 
     function sweep() {
